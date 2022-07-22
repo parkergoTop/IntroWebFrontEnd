@@ -21,24 +21,117 @@
              
             <img  id= "mobile-cta" calss = "mobile-menu" src="images/menu.svg" alt="Open navigation">
                 
-             <nav>
-                 <ul class="primary-nav">
+             <nav>  <!-- this is a section specialised for "Navigation part" only-->
+                 <img  id= "mobile-exit" calss = "mobile-menu-exit" src="images/exit.svg" alt="Close navigation">
+                 <ul class="primary-nav mobile-menu"> <!--class attributs can accept multi class names-->
                     <li class="current"><a href="#">Home</a></li>
                     <li><a href="#">Feature</a></li>
                     <li><a href="#">Pricing</a></li>
                  </ul>
                  <!-- <ul> is for " unordered list ", <li> defines list element-->
-             </nav>
-             <!-- this is a section specialised for "Navigation part" only-->
-             <ul class="secondary-nav">
-                <li class="current"><a href="#">Contact</a></li>
-                <li class="go-premium-cts"><a href="#">Go Premium</a></li>
-             </ul>
-            
-         </nav>
+             
+                  <ul class="secondary-nav">
+                    <li class="current"><a href="#">Contact</a></li>
+                    <li class="go-premium-cts"><a href="#">Go Premium</a></li>
+                  </ul>
+            </nav>
         </div>
 
      </div>
+
+   <section class ="hero">   
+   <!-- just like a <nav> <dev>,defines a section/ devision which has sepcial use -->
+   <!-- hero section is typically called, first one underneath the nav part-->
+   <!-- first section user will see, very important-->
+      <div class ="container">
+         <div class="left-col">
+             <p class="subhead">It is nitty &amp; Gritty</p>
+             <h1>A Task app that does not stink</h1>
+
+            <div class="hero-cta">
+               <a href="#" class="primary-cta">Try for free</a>
+               <a href="#" class="Watch-video-cta">
+                  <img src="images/watch.svg" alt="watch a video"> Watch a image
+               </a>
+            </div>
+
+         </div>
+         <img src="images/illustration.svg" class ="hero-img" alt="illustration">
+       </div>
+   </section>
+
+
+   <section class="feacture-section">
+      <div class="conatianer">
+         <ul>
+            <li>Unlimited Tasks</li> 
+            <li>SMS Task Reminders</li>
+            <li>Confetti Explosions upon task completion</li>
+            <li>Social Media Announcements</li>
+            <li>Real Time Collaboration</li>
+            <li>Other awsome feathers</li>
+         </ul>
+         <img src="images/holding-phone.jpg" class="holding-phone"alt="Holding phone">
+      </div>
+   </section>
+
+   <section>
+      <div class="container">     <!-- class of container is reused for multi-times-->
+         <ul>
+            <li>
+               <img src="images/person.jpg" alt="Person">
+               <blockquote>"Lorem ispum dolor sit amet, consetetur sadipscing elitr "</blockquote>
+               <cite>- Jane Doe</cite>
+            </li>
+            <li>
+               <img src="images/person.jpg" alt="Person">
+               <blockquote>"Lorem ispum dolor sit amet, consetetur sadipscing elitr "</blockquote>
+               <cite>- Jane Doe</cite>
+            </li>
+            <li>
+               <img src="images/person.jpg" alt="Person">
+               <blockquote>"Lorem ispum dolor sit amet, consetetur sadipscing elitr "</blockquote>
+               <cite>- Jane Doe</cite>
+            </li>
+         </ul>
+      </div>
+   </section>
+
+
+   <section class="contact-section">
+      <div class="container">
+         <div class="contact-left">
+            <h2>Contact</h2>
+
+            <form action="">
+               <label for="name">Name</label>
+               <input type="text" id="name" name="name" placeholder="Your First Name">>
+               <!-- for attribute in label tag is "for" id in input-->
+
+               <label for="name">Email</label>
+               <input type="email" id="email" name="email" placeholder="Your email">
+               <!-- notice there is a "placeholder attribute in tag of input"-->
+
+               <label for="message">Message</label>
+               <textarea type="text" id="message" \ name="message" placeholder="Leave a message" cols="30" rows="10"></textarea>
+               
+
+               <input type="submit" class="sent-message-cta" id="send-message" value="Send Message">
+               <!-- cat stands for "call to action" -->
+            </form> 
+         </div>
+
+
+         <div class="contact-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13248.999260867373!2d151.1917394328338!3d-33.88321947672315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae265bb4a143%3A0x16e224b2bd8fa957!2z5oKJ5bC856eR5oqA5aSn5a2m!5e0!3m2!1szh-CN!2sau!4v1658471910063!5m2!1szh-CN!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <!-- <iframe> allows you to embed a webpage into your webpage-->
+            <!-- iframe shows google resufe to connect by direct url, google has its own "embed in map"-->
+         </div>
+
+      </div>
+   </section>
 </body>
+
+
 
 </html>
