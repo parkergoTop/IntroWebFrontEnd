@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Lora:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto:wght@100&family=Source+Serif+Pro:wght@200&display=swap');
+
+:root{
+    --primary-color:blue;
+}
+body{
+    background: #f2f2f2;
+    margin: 0;
+    font-family: 'Source Serif Pro';
+    /* go to fonts.google.com then import it into the CSS*/
+}
+
+
+/*  
+body above is called slector 
+a selector can be various things 
+Selector can be "tage" like body....
+         also can be a class
+*/
+ /*margin affects everything outside of the element, padding affects inside */
+
+.navbar{
+    background:white;
+    padding: 1em;   /*margin affects everything outside of the element, padding affects inside */
+    .logo{
+        text-decoration:none;
+        font-weight:bold;
+        color:black;
+        font-size: 1.2em;
+
+        span{
+            color:var(--primary-color);
+        }
+    }
+
+    nav{
+        display: none; /*make nav-bar invisible for mobile first mode*/
+    
+    }
+
+    .container{
+        display: flex;  /*flex means flex bar(should dive in ) for display*/
+        place-content: space-between; 
+    
+    .mobile-menu{
+     cursor: pointer;
+    }   /* !!!!! why this one is not working?????*/
+
+}
+}
+
+a{
+    color:gray;
+}
+
+ul{  
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+section{
+    padding-top: 5em 2em ；
+
+}
+
+.hero{
+    text-align: center;
+}
+
+.left-col{
+  .subhead{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing:3em;
+  }
+
+  h1{
+    font-size: 2.5em;
+    line-height:1.3em;
+    margin-top:.2em;
+  }
+   
+  .primary-cta{
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 1.4em;
+    border-radius: 5em;  /* make this border rounded*/
+    font-weight: bold;
+    display:inline-block ;  /*!!!!!!! what is display property?!!*/
+  }
+
+  .watch-video-cta{
+    display:block;
+    margin-top:1em;
+  }
+}
