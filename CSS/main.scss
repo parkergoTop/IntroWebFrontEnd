@@ -7,6 +7,9 @@ body{
     background: #f2f2f2;
     margin: 0;
     font-family: 'Source Serif Pro';
+    // font: 200; !!!! what are the differences between font/ font-size   
+    // !!! ~ font-weight/ font-family 
+
     /* go to fonts.google.com then import it into the CSS*/
 }
 
@@ -14,7 +17,7 @@ body{
 /*  
 body above is called slector 
 a selector can be various things 
-Selector can be "tage" like body....
+Selector can be "tag" like body....
          also can be a class
 */
  /*margin affects everything outside of the element, padding affects inside */
@@ -93,6 +96,115 @@ section{
 
   .watch-video-cta{
     display:block;
-    margin-top:1em;
+    margin-top:1em;   
+    img{
+        margin: top 5em; 
+    }
   }
+}
+
+
+.hero-img{
+    width: 70%;
+    margin-top: 3em;
+}
+
+section.features-section{
+     background:#20272E;    /* this is to define the background color*/
+     color: white;  /* this is to define the color of the "content => text" */
+}
+
+ul.features-list{
+    margin:0;
+    padding-left: 0.1em;
+    // come back later 
+
+    li{
+        front-size: 1.1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        
+        &:before{     
+            content:'';
+            position: absolute;   // position in the element within the document ?
+            width: 20px;
+            height: 20px;
+            background-image: url(../images/bullet.svg);
+            background-size:contain;
+            margin-right: .5em;
+        }
+    }
+}
+
+.fectures-section img{
+    display: none;  // make the holding image hidden in the mobile mode
+
+}
+
+
+.testimonials-section{
+    background-color: var(--primary-color);
+    color: #f2f2f2;
+
+    li{
+        background: var(--primary-color);
+        text-align: center;
+        padding: 2em 1em;// 2em on the top and bottom. 1em on the left-right 
+        width: 80%;  // !! dive in to the percentage of width 
+        margin: 0 auto 5em auto;  // top - right - bottom - left 
+        border-radius: 1em;
+
+        img{
+            width: 5em;
+            height:5em;
+            border: 5px solid var(--primary-color); // ?? what stands for "solid"
+            border-radius: 50%;  // ?? why use 50%
+            margin-top: -4.5em; // ??? why use negative value
+        }
+    }
+} 
+
+
+.contact-section{
+   
+    h2{
+        font-size: 2em;
+    }
+
+    label{
+        display: block;  // dispalys an element as an block element eg <p>
+        // then the element will start a new line, anc takes up the whole width
+        font-size: 1.2em;
+        margin-bottom: .5em;
+    }
+
+    input, textarea{  // we can do to tags to togetger for the same css
+       width: 100%;   // 100% width of the upper level comtainer
+       padding: .8em; // inside make it other
+       margin-bottom: 1em;  //push different element away from each other
+       border: 1px solid gray;  // colorize the border + resize the border size
+       box-sizing:border-box; // ??what is box-sizing?  dive in later
+
+    }
+
+    input[type = "submit"] {
+        // use the "selector"   element/tag[type = ""]
+        // above we can just use class, this is just another way 
+
+        background-color: var(--primary-color);
+        color:white;
+        font-weight: bold;
+        border:non;
+        margin-bottom: 1.3em;
+        border-radius: inline-block;
+        padding: .8em 2em;
+        cursor: pointer;
+        display: inline; // ??? shold dive in
+    }
+     
+}
+
+iframe{
+    width: 100%;
+    height:300px;
 }
