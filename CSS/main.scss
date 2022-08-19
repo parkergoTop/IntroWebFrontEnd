@@ -5,7 +5,7 @@
 }
 body{
     background: #f2f2f2;
-    margin: 0;
+    margin-right: 0;
     font-family: 'Source Serif Pro';
     // font: 200; !!!! what are the differences between font/ font-size   
     // !!! ~ font-weight/ font-family 
@@ -37,20 +37,20 @@ Selector can be "tag" like body....
     }
 
     nav{
-        display: none; /*make nav-bar invisible for mobile first mode*/
-    
+        display: none;
     }
+
 
     .container{
         display: flex;  /*flex means flex bar(should dive in ) for display*/
         place-content: space-between; 
-    
-    .mobile-menu{
-     cursor: pointer;
-    }   /* !!!!! why this one is not working?????*/
 
+    }
+   .mobile-menu{
+           cursor: pointer;
+    }   /* !!!!! why this one is not working?????*/
 }
-}
+
 
 a{
     color:gray;
@@ -75,7 +75,7 @@ section{
   .subhead{
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing:3em;
+    letter-spacing:0.3em;
   }
 
   h1{
@@ -98,35 +98,40 @@ section{
     display:block;
     margin-top:1em;   
     img{
-        margin: top 5em; 
+        margin-right: 0.5em; 
     }
   }
 }
 
 
 .hero-img{
-    width: 70%;
+    width: 60%;
     margin-top: 3em;
 }
 
-section.features-section{
+section.features-section{   // helps where does this class come from
      background:#20272E;    /* this is to define the background color*/
      color: white;  /* this is to define the color of the "content => text" */
 }
 
 ul.features-list{
     margin:0;
-    padding-left: 0.1em;
+    padding-left: 1em;
+    display:grid;
+    padding-top: 1.1em;
     // come back later 
 
     li{
-        front-size: 1.1em;
+        font-size: 1.1em;
         margin-bottom: 1em;
-        margin-left: 2em;
-        
-        &:before{     
+        margin-left: 3em;
+        position: relative;
+      
+        /* !!!!! */
+        &:before{     // ?????????????? this is to 
             content:'';
-            position: absolute;   // position in the element within the document ?
+            left: -2em;
+            position:absolute;   // position in the element within the document ?
             width: 20px;
             height: 20px;
             background-image: url(../images/bullet.svg);
@@ -136,8 +141,9 @@ ul.features-list{
     }
 }
 
-.fectures-section img{
-    display: none;  // make the holding image hidden in the mobile mode
+
+.features-section img{
+   display: none;  // make the holding image hidden in the mobile mode
 
 }
 
@@ -145,13 +151,14 @@ ul.features-list{
 .testimonials-section{
     background-color: var(--primary-color);
     color: #f2f2f2;
+    display: grid;
 
     li{
-        background: var(--primary-color);
+        background: #006BC6;
         text-align: center;
         padding: 2em 1em;// 2em on the top and bottom. 1em on the left-right 
         width: 80%;  // !! dive in to the percentage of width 
-        margin: 0 auto 5em auto;  // top - right - bottom - left 
+        margin: 5em auto 5em auto;  // top - right - bottom - left 
         border-radius: 1em;
 
         img{
@@ -166,6 +173,7 @@ ul.features-list{
 
 
 .contact-section{
+     padding-left: 1em;
    
     h2{
         font-size: 2em;
@@ -196,8 +204,8 @@ ul.features-list{
         font-weight: bold;
         border:non;
         margin-bottom: 1.3em;
-        border-radius: inline-block;
-        padding: .8em 2em;
+        border-radius: 5em;
+        padding: .8em 3em;
         cursor: pointer;
         display: inline; // ??? shold dive in
     }
@@ -207,4 +215,52 @@ ul.features-list{
 iframe{
     width: 100%;
     height:300px;
+    margin-right: 4em;
 }
+
+nav.menu-btn{
+    display: block;
+}
+
+nav{
+  position: fixed;
+  z-index:999;
+  width: 66%;
+  right: 0;  // ??????
+  top: 0; // ??
+  background-color: black;
+  height: 100vh;// ??what is the vh? another one relative unit
+  padding:1em;
+
+
+  ul.primary-nav{
+     margin-top:5em;
+  }
+
+  li{
+    a{
+        color:#f2f2f2;
+        text-decoration: none;
+        display:block;
+        padding:.5em;
+        font-size: 1.3em;
+        text-align: right;
+ 
+        &:hover{    // ???what si :hover?
+             font-weight: bold;
+        }
+    }
+  }
+}
+
+
+.mobile-menu-exit{
+    float: right; // float tag
+    cursor: pointer;
+}
+
+
+@media only screen and(min-width:768px){
+
+}
+

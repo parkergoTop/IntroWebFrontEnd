@@ -10,6 +10,11 @@
 <!--  Colsing <> </>- means you need some content in the middle   -->
 <!--  We dont need to worry about the "meta tag "-->
 <!--  link to reference css file, we dont refence the scss-->
+
+<script>
+   console.log("Test if the script parts works in the head session");
+</script>
+<link href="/favicon.ico" type="image/x-icon" rel="icon" />
 </head>
 
 
@@ -20,24 +25,45 @@
              <!-- # means nothing is gonna happen-->
              <!--  A <span> element which is used to color a part of a text -->
              
-            <img  id= "mobile-cta" calss = "mobile-menu" src="images/menu.svg" alt="Open navigation">
+            <img  id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open navigation">
                 
-            <nav>  <!-- this is a section specialised for "Navigation part" only-->
-                 <img  id= "mobile-exit" calss = "mobile-menu-exit" src="images/exit.svg" alt="Close navigation">
-                 <ul class="primary-nav"> <!--class attributs can accept multi class names-->
+            <nav >  <!-- this is a section specialised for "Navigation part" only-->
+                <img id= "mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close navigation">
+
+            
+                <ul class="primary-nav"> <!--class attributs can accept multi class names-->
                     <li class="current"><a href="#">Home</a></li>
-                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">features-list</a></li>
                     <li><a href="#">Pricing</a></li>
-                 </ul>
+                </ul>
                  <!-- <ul> is for " unordered list ", <li> defines list element-->
              
-                  <ul class="secondary-nav">
+               <ul class="secondary-nav">
                     <li class="current"><a href="#">Contact</a></li>
                     <li class="go-premium-cts"><a href="#">Go Premium</a></li>
-                  </ul>
+                </ul>
+             
             </nav>
         </div>
      </div>
+
+     <script>
+      console.log("test if this script is working or not");
+   
+      const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+   
+      mobileBtn.addEventListener('click', () => {
+          nav.classList.add('menu-btn');
+      });
+   
+      mobileBtnExit.addEventListener('click', () => {
+          nav.classList.remove('menu-btn');
+      });
+   
+   </script>
+     
 
    <section class ="hero">   
    <!-- just like a <nav> <dev>,defines a section/ devision which has sepcial use -->
@@ -50,7 +76,7 @@
 
             <div class="hero-cta">
                <a href="#" class="primary-cta">Try for free</a>
-               <a href="#" class="Watch-video-cta">
+               <a href="#" class="watch-video-cta">
                   <img src="images/watch.svg" alt="watch a video"> Watch a image
                </a>
             </div>
@@ -61,10 +87,10 @@
    </section>
 
 
-   <section class="feacture-section">
+   <section class="features-section">
       <div class="conatianer">
          <ul class="features-list">
-            <li>Unlimited Tasks</li> 
+            <li id="limited">Unlimited Tasks</li> 
             <li>SMS Task Reminders</li>
             <li>Confetti Explosions upon task completion</li>
             <li>Social Media Announcements</li>
@@ -105,7 +131,7 @@
 
             <form action="">
                <label for="name">Name</label>
-               <input type="text" id="name" name="name" placeholder="Your First Name">>
+               <input type="text" id="name" name="name" placeholder="Your First Name">
                <!-- for attribute in label tag is "for" id in input-->
 
                <label for="name">Email</label>
@@ -130,8 +156,8 @@
 
       </div>
    </section>
+
+
+  
 </body>
-
-
-
 </html>

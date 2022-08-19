@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Lora:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto:wght@100&family=Source+Serif+Pro:wght@200&display=swap");
+:root {
+  --primary-color:blue;
+}
+
+body {
+  background: #f2f2f2;
+  margin-right: 0;
+  font-family: "Source Serif Pro";
+  /* go to fonts.google.com then import it into the CSS*/
+}
+
+/*  
+body above is called slector 
+a selector can be various things 
+Selector can be "tag" like body....
+         also can be a class
+*/
+/*margin affects everything outside of the element, padding affects inside */
+.navbar {
+  background: white;
+  padding: 1em; /*margin affects everything outside of the element, padding affects inside */
+  /* !!!!! why this one is not working?????*/
+}
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+.navbar .logo span {
+  color: var(--primary-color);
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex; /*flex means flex bar(should dive in ) for display*/
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+}
+
+a {
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding-top: 5em 2em ；;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+}
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0.2em;
+}
+.left-col .primary-cta {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 1.4em;
+  border-radius: 5em; /* make this border rounded*/
+  font-weight: bold;
+  display: inline-block; /*!!!!!!! what is display property?!!*/
+}
+.left-col .watch-video-cta {
+  display: block;
+  margin-top: 1em;
+}
+.left-col .watch-video-cta img {
+  margin-right: 0.5em;
+}
+
+.hero-img {
+  width: 60%;
+  margin-top: 3em;
+}
+
+section.features-section {
+  background: #20272E; /* this is to define the background color*/
+  color: white; /* this is to define the color of the "content => text" */
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 1em;
+  display: grid;
+  padding-top: 1.1em;
+}
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  position: relative;
+  /* !!!!! */
+}
+ul.features-list li:before {
+  content: "";
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/bullet.svg);
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.features-section img {
+  display: none;
+}
+
+.testimonials-section {
+  background-color: var(--primary-color);
+  color: #f2f2f2;
+  display: grid;
+}
+.testimonials-section li {
+  background: #006BC6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 5em auto 5em auto;
+  border-radius: 1em;
+}
+.testimonials-section li img {
+  width: 5em;
+  height: 5em;
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+.contact-section {
+  padding-left: 1em;
+}
+.contact-section h2 {
+  font-size: 2em;
+}
+.contact-section label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+.contact-section input, .contact-section textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.contact-section input[type=submit] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: non;
+  margin-bottom: 1.3em;
+  border-radius: 5em;
+  padding: 0.8em 3em;
+  cursor: pointer;
+  display: inline;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  margin-right: 4em;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background-color: black;
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
