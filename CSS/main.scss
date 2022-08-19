@@ -119,7 +119,9 @@ ul.features-list{
     padding-left: 1em;
     display:grid;
     padding-top: 1.1em;
-    // come back later 
+    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    // making this display as grid first 
+    // repeats function, automatically knows if has enough room maybe do more coloumns to display content
 
     li{
         font-size: 1.1em;
@@ -261,6 +263,183 @@ nav{
 
 
 @media only screen and(min-width:768px){
+    .mobile-menu, .mobile-menu-exit{
+        display: none;
+    }
 
+    .navbar .container{
+        display:grid;
+        grid-template-columns: 180px auto; // 180px for logo, auto means the rest of the element takes the rest of it
+    
+    }
+
+
+    .navbar nav{
+        display:flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding:0;
+
+        ul{
+            display: flex;
+        }
+
+        a{
+            color: black;
+            font-size: 1em;
+            padding:.1em  1em; //.1em unit on the top and bottom 
+        }
+        
+        ul.primary-nav{
+            margin:0;
+        }
+        
+        li.current a{
+          font-size: bold;
+        }
+        
+        li.go-premium-cta a{
+            color: var(--primary-color);
+            border:3px solid var(--primary-color);
+            border-radius: 5em;
+            margin-top: -.2em;
+
+
+            &:hover{   // when cursor stays/hobvers color changes
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+        }
+    }
+}
+// ??? what is the difference between @ media screen and @media only screen
+@media only screen and (min-width: 1080px){
+  .container{   // <nav class="container" everywhere>
+    width: 1080px;   // reason we have container, we can center everything
+    margin:0 auto;
+  }
+
+  section{
+    padding:10em 4em;
+  }
+
+  .hero .container{  // no . between ????
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    .left-col{
+        margin: 3em 3em 0 5em;
+
+        h1{
+            font-size: 3em;
+            width: 90%;
+        }
+    }
+  }
+
+  .hero-img{
+    width: 30%;
+    margin-right: 8em;
+  }
+  
+  .hero-cta{
+    display: flex; // dispaly attributes
+  }
+
+  .primary-cta{
+    margin-right: 1em;
+  }
+
+  ul.features-list{
+    display: block;
+    margin-left: 5em;
+     li{
+        font-size:1.4em;
+
+        &:before{   // what are &  &:before
+            width: 30px;
+            height: 30px;
+
+        }
+     }
+  }
+
+  .features-section{
+   position: relative; // ??? position tag
+
+  }
+
+  .features-section img{
+
+    display: block;
+    position:absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2em;
+  }
+
+  .testimonials-section ul{ // means  ul element within .testmonials-section class
+   display: flex;
+
+   li{
+     margin:0 1em;
+   }
+  }
+
+  .contact-section{
+    position: relative;
+
+    .container{
+        display: flex;
+
+    }
+  }
+
+  .contact-right{
+    position: absolute;
+    right:0;
+    //top:0; //??? what are these top/bottom/right/left
+    margin-top: 30px;
+    width: 45%;
+    height: 75%;
+
+    iframe{
+        height: 75%;
+    }
+
+  }
+}
+
+
+@media only screen and(min-width:1200px){
+    // how does the blue part overlap the previous section???
+    .features-section{
+
+        // 这儿要好好看
+        &:before{
+            content:'';
+            position: absolute;
+            width: 10%;
+            height: 20em;
+            background: var(--primary-color);
+            left: 0;
+            top:-4em;  // by using negative -4em
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            height:20em;
+            background: url("../images/dots.svg")no-repeat; // backgourd can define both color and background content like image 
+            left: 4.5em;
+            top: 2em;
+        }
+    }
 }
 
